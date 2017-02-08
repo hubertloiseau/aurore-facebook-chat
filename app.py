@@ -109,6 +109,8 @@ def ratp(destination):
         destination=destination.replace(" ","+").replace("-","+").lower()
     else:
         destination="massy+palaiseau"
+    if destination == "massy":
+        destination="massy+palaiseau"	
     source = "gare+du+nord"
     r=requests.get("https://api-ratp.pierre-grimaud.fr/v2/rers/B/stations/"+source+"?destination=robinson+saint+remy+les+chevreuse&endingstation="+destination)
     if r.ok:
