@@ -14,7 +14,6 @@ raw_text = raw_text.lower()
 # create mapping of unique chars to integers
 chars = sorted(list(set(raw_text)))
 char_to_int = dict((c, i) for i, c in enumerate(chars))
-
 n_chars = len(raw_text)
 n_vocab = len(chars)
 print "Total Characters: ", n_chars
